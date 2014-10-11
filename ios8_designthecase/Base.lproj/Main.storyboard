@@ -13,32 +13,86 @@
                         <viewControllerLayoutGuide type="bottom" id="UWW-3A-ySr"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1075"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edition-standard-black" translatesAutoresizingMaskIntoConstraints="NO" id="R8c-wU-x5h">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvO-EM-w48">
-                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pEI-J5-Tdz">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1075"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTZ-Th-zpe">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1075"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edition-standard" translatesAutoresizingMaskIntoConstraints="NO" id="xLY-Iu-eGn">
+                                                <rect key="frame" x="0.0" y="507" width="320" height="568"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="3Gg-OP-veR">
+                                                <rect key="frame" x="95" y="591" width="130" height="130"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="yahoo" translatesAutoresizingMaskIntoConstraints="NO" id="TLY-3p-e5e">
+                                                <rect key="frame" x="87" y="950" width="147" height="34"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="at" translatesAutoresizingMaskIntoConstraints="NO" id="7DT-c7-HHe">
+                                                <rect key="frame" x="65" y="955" width="21" height="23"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="TJx-S2-J0J">
+                                                <rect key="frame" x="123" y="841" width="32" height="32"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-i" translatesAutoresizingMaskIntoConstraints="NO" id="d1A-Zb-Bb5">
+                                                <rect key="frame" x="56" y="797" width="9" height="43"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-l" translatesAutoresizingMaskIntoConstraints="NO" id="pVp-05-GGm">
+                                                <rect key="frame" x="55" y="848" width="11" height="40"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-o" translatesAutoresizingMaskIntoConstraints="NO" id="6Fr-BZ-qng">
+                                                <rect key="frame" x="70" y="857" width="19" height="33"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-v" translatesAutoresizingMaskIntoConstraints="NO" id="HHS-SM-p5K">
+                                                <rect key="frame" x="91" y="858" width="21" height="33"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-e" translatesAutoresizingMaskIntoConstraints="NO" id="DJf-EW-inu">
+                                                <rect key="frame" x="113" y="860" width="16" height="28"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-m" translatesAutoresizingMaskIntoConstraints="NO" id="eUi-pf-bwu">
+                                                <rect key="frame" x="58" y="897" width="26" height="33"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-y" translatesAutoresizingMaskIntoConstraints="NO" id="Zdi-H4-M9g">
+                                                <rect key="frame" x="86" y="908" width="20" height="29"/>
+                                            </imageView>
+                                        </subviews>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" red="0.92941176469999998" green="0.078431372550000003" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="LET'S GO">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="zBc-Fz-Ew4" kind="modal" modalTransitionStyle="crossDissolve" id="VDl-K8-euH"/>
-                                </connections>
-                            </button>
+                                <constraints>
+                                    <constraint firstItem="NTZ-Th-zpe" firstAttribute="top" secondItem="pEI-J5-Tdz" secondAttribute="top" id="J8a-ML-hRV"/>
+                                    <constraint firstItem="NTZ-Th-zpe" firstAttribute="leading" secondItem="pEI-J5-Tdz" secondAttribute="leading" id="h67-Pd-HF1"/>
+                                    <constraint firstAttribute="trailing" secondItem="NTZ-Th-zpe" secondAttribute="trailing" id="rg9-eL-wqM"/>
+                                    <constraint firstAttribute="bottom" secondItem="NTZ-Th-zpe" secondAttribute="bottom" id="zvf-4b-J2z"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pEI-J5-Tdz" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="aAo-Ge-0jS"/>
+                            <constraint firstItem="pEI-J5-Tdz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gmM-c1-Ldp"/>
+                            <constraint firstItem="UWW-3A-ySr" firstAttribute="top" secondItem="pEI-J5-Tdz" secondAttribute="bottom" id="tE2-Kf-rJI"/>
+                            <constraint firstAttribute="trailing" secondItem="pEI-J5-Tdz" secondAttribute="trailing" id="uSX-pA-c48"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mn7-bA-2FY"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="1075"/>
+                    <connections>
+                        <outlet property="contentView" destination="NTZ-Th-zpe" id="qan-f0-ah3"/>
+                        <outlet property="scrollView" destination="pEI-J5-Tdz" id="0Eq-R3-bM2"/>
+                        <outlet property="tile1View" destination="3Gg-OP-veR" id="s2Z-Hv-du0"/>
+                        <outlet property="tile2View" destination="TLY-3p-e5e" id="OCS-xo-ADc"/>
+                        <outlet property="tile3View" destination="7DT-c7-HHe" id="Blw-ln-jbt"/>
+                        <outlet property="tile4View" destination="TJx-S2-J0J" id="HwW-Wm-m8j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="609" y="317"/>
+            <point key="canvasLocation" x="609" y="316.5"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="3Jh-hX-upo">
@@ -52,19 +106,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="1280" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HiX-Yi-spc">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HiX-Yi-spc">
                                 <rect key="frame" x="0.0" y="0.0" width="1280" height="568"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vlG-s4-ae9">
                                         <rect key="frame" x="0.0" y="0.0" width="1280" height="568"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edition-standard" translatesAutoresizingMaskIntoConstraints="NO" id="8Ux-rH-mw3">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edition-yos" translatesAutoresizingMaskIntoConstraints="NO" id="8Ux-rH-mw3">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edition-you" translatesAutoresizingMaskIntoConstraints="NO" id="dzx-mz-RVV">
                                                 <rect key="frame" x="320" y="0.0" width="320" height="568"/>
                                             </imageView>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edition-yos" translatesAutoresizingMaskIntoConstraints="NO" id="jao-57-Trf">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="edition-standard" translatesAutoresizingMaskIntoConstraints="NO" id="jao-57-Trf">
                                                 <rect key="frame" x="640" y="0.0" width="320" height="568"/>
                                             </imageView>
                                         </subviews>
@@ -74,14 +128,24 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="T7r-aH-oUz" firstAttribute="top" secondItem="HiX-Yi-spc" secondAttribute="bottom" id="9Q9-76-k6h"/>
+                            <constraint firstItem="HiX-Yi-spc" firstAttribute="leading" secondItem="IkT-7c-4ph" secondAttribute="leading" id="NFa-8e-0hq"/>
+                            <constraint firstItem="HiX-Yi-spc" firstAttribute="top" secondItem="IkT-7c-4ph" secondAttribute="top" id="Xph-Y6-ScQ"/>
+                            <constraint firstAttribute="trailing" secondItem="HiX-Yi-spc" secondAttribute="trailing" id="dlR-8J-TcE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JKn-7o-ffe"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1280" height="568"/>
+                    <connections>
+                        <outlet property="contentView" destination="vlG-s4-ae9" id="nXb-6s-W6b"/>
+                        <outlet property="scrollView" destination="HiX-Yi-spc" id="vBE-Br-Wjg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rHc-1l-F6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="609" y="1053"/>
+            <point key="canvasLocation" x="609" y="1344"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fQR-zK-32z">
@@ -103,10 +167,20 @@
         </scene>
     </scenes>
     <resources>
+        <image name="at" width="15" height="16"/>
+        <image name="avatar" width="99" height="99"/>
         <image name="edition-standard" width="225" height="440"/>
-        <image name="edition-standard-black" width="225" height="440"/>
         <image name="edition-yos" width="450" height="880"/>
         <image name="edition-you" width="225" height="440"/>
+        <image name="heart" width="23" height="24"/>
+        <image name="letter-e" width="11" height="19"/>
+        <image name="letter-i" width="6" height="29"/>
+        <image name="letter-l" width="8" height="30"/>
+        <image name="letter-m" width="18" height="24"/>
+        <image name="letter-o" width="14" height="24"/>
+        <image name="letter-v" width="13" height="21"/>
+        <image name="letter-y" width="15" height="22"/>
+        <image name="yahoo" width="113" height="26"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

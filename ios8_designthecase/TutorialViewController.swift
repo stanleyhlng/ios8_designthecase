@@ -11,11 +11,17 @@ import UIKit
 
 class TutorialViewController: UIViewController {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         println("TutorialViewController.viewDidLoad()")
+        
+        contentView.sizeToFit()
+        scrollView.contentSize = contentView.frame.size
     }
 
     override func didReceiveMemoryWarning() {
