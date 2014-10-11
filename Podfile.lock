@@ -1,0 +1,13 @@
+PODS:
+  - HexColors (2.2.1)
+  - Reveal-iOS-SDK (1.0.5)
+
+DEPENDENCIES:
+  - HexColors (~> 2.2)
+  - Reveal-iOS-SDK
+
+SPEC CHECKSUMS:
+  HexColors: 01384d2bbe8dc4ffa43c3b4135db6e976952d153
+  Reveal-iOS-SDK: d4b2f4c20d5b823b7f8b88250fe1b71cecd424a7
+
+COCOAPODS: 0.33.1
