@@ -24,15 +24,22 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var tile9View: UIImageView!  // E (LOVE)
     @IBOutlet weak var tile10View: UIImageView! // M (MY)
     @IBOutlet weak var tile11View: UIImageView! // Y (MY)
+    @IBOutlet weak var tile12View: UIImageView! // J (JOB)
+    @IBOutlet weak var tile13View: UIImageView! // O (JOB)
+    @IBOutlet weak var tile14View: UIImageView! // B (JOB)
     
     var yOffsets : [Float] = [-285, -740, -480, -408, -500, -400, -400, -400, -400,
-        -640, -640]
+        -640, -640,
+        -700, -700, -700]
     var xOffsets : [Float] = [-30, 75, -45, 10, 200, 180, 180, 180, 180,
-        5, 5]
+        5, 5,
+        -100, -100, -100]
     var scales : [Float] = [1, 1.65, 1.7, 1.6, 1.65, 1.65, 1.65, 1.65, 1.65,
-        1.7, 1.7]
+        1.7, 1.7,
+        1.5, 1.5, 1.5]
     var rotations : [Float] = [-10, -10, 10, 10, 10, -10, -10, -10, -10,
-        10, 10]
+        10, 10,
+        -10, -10, -10]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +64,10 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
 
         transformView(tile10View, atIndex: 9, offset: 0)
         transformView(tile11View, atIndex: 10, offset: 0)
+
+        transformView(tile12View, atIndex: 11, offset: 0)
+        transformView(tile13View, atIndex: 12, offset: 0)
+        transformView(tile14View, atIndex: 13, offset: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -106,6 +117,10 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         
         transformView(tile10View, atIndex: 9, offset: offset)
         transformView(tile11View, atIndex: 10, offset: offset)
+        
+        transformView(tile12View, atIndex: 11, offset: offset)
+        transformView(tile13View, atIndex: 12, offset: offset)
+        transformView(tile14View, atIndex: 13, offset: offset)
     }
     
     /*

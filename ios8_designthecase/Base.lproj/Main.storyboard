@@ -95,6 +95,9 @@
                         <outlet property="scrollView" destination="pEI-J5-Tdz" id="0Eq-R3-bM2"/>
                         <outlet property="tile10View" destination="eUi-pf-bwu" id="HGO-Nv-LFO"/>
                         <outlet property="tile11View" destination="Zdi-H4-M9g" id="8SW-MB-sVT"/>
+                        <outlet property="tile12View" destination="vFZ-HC-m56" id="DoF-19-azy"/>
+                        <outlet property="tile13View" destination="HLd-Go-sse" id="OOB-wz-YR9"/>
+                        <outlet property="tile14View" destination="sQR-EM-0GT" id="1Wk-pk-3XN"/>
                         <outlet property="tile1View" destination="3Gg-OP-veR" id="s2Z-Hv-du0"/>
                         <outlet property="tile2View" destination="TLY-3p-e5e" id="OCS-xo-ADc"/>
                         <outlet property="tile3View" destination="7DT-c7-HHe" id="Blw-ln-jbt"/>
