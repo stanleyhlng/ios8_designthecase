@@ -13,15 +13,26 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
-    @IBOutlet weak var tile1View: UIImageView!
-    @IBOutlet weak var tile2View: UIImageView!
-    @IBOutlet weak var tile3View: UIImageView!
-    @IBOutlet weak var tile4View: UIImageView!
+    @IBOutlet weak var tile1View: UIImageView!  // AVATAR
+    @IBOutlet weak var tile2View: UIImageView!  // YAHOO
+    @IBOutlet weak var tile3View: UIImageView!  // @
+    @IBOutlet weak var tile4View: UIImageView!  // HEART
+    @IBOutlet weak var tile5View: UIImageView!  // I
+    @IBOutlet weak var tile6View: UIImageView!  // L (LOVE)
+    @IBOutlet weak var tile7View: UIImageView!  // O (LOVE)
+    @IBOutlet weak var tile8View: UIImageView!  // V (LOVE)
+    @IBOutlet weak var tile9View: UIImageView!  // E (LOVE)
+    @IBOutlet weak var tile10View: UIImageView! // M (MY)
+    @IBOutlet weak var tile11View: UIImageView! // Y (MY)
     
-    var yOffsets : [Float] = [-285, -740, -480, -408, -480, -500]
-    var xOffsets : [Float] = [-30, 75, -45, 10, -200, -15]
-    var scales : [Float] = [1, 1.65, 1.7, 1.6, 1.65, 1.65]
-    var rotations : [Float] = [-10, -10, 10, 10, 10, -10]
+    var yOffsets : [Float] = [-285, -740, -480, -408, -500, -400, -400, -400, -400,
+        -640, -640]
+    var xOffsets : [Float] = [-30, 75, -45, 10, 200, 180, 180, 180, 180,
+        5, 5]
+    var scales : [Float] = [1, 1.65, 1.7, 1.6, 1.65, 1.65, 1.65, 1.65, 1.65,
+        1.7, 1.7]
+    var rotations : [Float] = [-10, -10, 10, 10, 10, -10, -10, -10, -10,
+        10, 10]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +48,15 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         transformView(tile2View, atIndex: 1, offset: 0)
         transformView(tile3View, atIndex: 2, offset: 0)
         transformView(tile4View, atIndex: 3, offset: 0)
+        transformView(tile5View, atIndex: 4, offset: 0)
+    
+        transformView(tile6View, atIndex: 5, offset: 0)
+        transformView(tile7View, atIndex: 6, offset: 0)
+        transformView(tile8View, atIndex: 7, offset: 0)
+        transformView(tile9View, atIndex: 8, offset: 0)
+
+        transformView(tile10View, atIndex: 9, offset: 0)
+        transformView(tile11View, atIndex: 10, offset: 0)
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,6 +97,15 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         transformView(tile2View, atIndex: 1, offset: offset)
         transformView(tile3View, atIndex: 2, offset: offset)
         transformView(tile4View, atIndex: 3, offset: offset)
+        transformView(tile5View, atIndex: 4, offset: offset)
+        
+        transformView(tile6View, atIndex: 5, offset: offset)
+        transformView(tile7View, atIndex: 6, offset: offset)
+        transformView(tile8View, atIndex: 7, offset: offset)
+        transformView(tile9View, atIndex: 8, offset: offset)
+        
+        transformView(tile10View, atIndex: 9, offset: offset)
+        transformView(tile11View, atIndex: 10, offset: offset)
     }
     
     /*

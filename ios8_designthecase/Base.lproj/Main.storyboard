@@ -58,6 +58,15 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-y" translatesAutoresizingMaskIntoConstraints="NO" id="Zdi-H4-M9g">
                                                 <rect key="frame" x="86" y="908" width="20" height="29"/>
                                             </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-j" translatesAutoresizingMaskIntoConstraints="NO" id="vFZ-HC-m56">
+                                                <rect key="frame" x="123" y="893" width="15" height="47"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-o" translatesAutoresizingMaskIntoConstraints="NO" id="HLd-Go-sse">
+                                                <rect key="frame" x="142" y="901" width="19" height="34"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="letter-b" translatesAutoresizingMaskIntoConstraints="NO" id="sQR-EM-0GT">
+                                                <rect key="frame" x="160" y="893" width="26" height="43"/>
+                                            </imageView>
                                         </subviews>
                                     </view>
                                 </subviews>
@@ -84,15 +93,22 @@
                     <connections>
                         <outlet property="contentView" destination="NTZ-Th-zpe" id="qan-f0-ah3"/>
                         <outlet property="scrollView" destination="pEI-J5-Tdz" id="0Eq-R3-bM2"/>
+                        <outlet property="tile10View" destination="eUi-pf-bwu" id="HGO-Nv-LFO"/>
+                        <outlet property="tile11View" destination="Zdi-H4-M9g" id="8SW-MB-sVT"/>
                         <outlet property="tile1View" destination="3Gg-OP-veR" id="s2Z-Hv-du0"/>
                         <outlet property="tile2View" destination="TLY-3p-e5e" id="OCS-xo-ADc"/>
                         <outlet property="tile3View" destination="7DT-c7-HHe" id="Blw-ln-jbt"/>
                         <outlet property="tile4View" destination="TJx-S2-J0J" id="HwW-Wm-m8j"/>
+                        <outlet property="tile5View" destination="d1A-Zb-Bb5" id="4rY-qr-KQa"/>
+                        <outlet property="tile6View" destination="pVp-05-GGm" id="GJ6-QK-rMY"/>
+                        <outlet property="tile7View" destination="6Fr-BZ-qng" id="VdB-ke-pO8"/>
+                        <outlet property="tile8View" destination="HHS-SM-p5K" id="IBC-PB-pDQ"/>
+                        <outlet property="tile9View" destination="DJf-EW-inu" id="lFS-l4-s7C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="609" y="316.5"/>
+            <point key="canvasLocation" x="607" y="316.5"/>
         </scene>
         <!--Tutorial View Controller-->
         <scene sceneID="3Jh-hX-upo">
@@ -173,8 +189,10 @@
         <image name="edition-yos" width="450" height="880"/>
         <image name="edition-you" width="225" height="440"/>
         <image name="heart" width="23" height="24"/>
+        <image name="letter-b" width="19" height="32"/>
         <image name="letter-e" width="11" height="19"/>
         <image name="letter-i" width="6" height="29"/>
+        <image name="letter-j" width="11" height="34"/>
         <image name="letter-l" width="8" height="30"/>
         <image name="letter-m" width="18" height="24"/>
         <image name="letter-o" width="14" height="24"/>
