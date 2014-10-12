@@ -9,7 +9,7 @@
 
 import UIKit
 
-class IntroViewController: UIViewController, UIScrollViewDelegate {
+class IntroViewController: UIViewController, UIScrollViewDelegate, UIViewControllerTransitioningDelegate, UIViewControllerAnimatedTransitioning {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
@@ -27,6 +27,8 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var tile12View: UIImageView! // J (JOB)
     @IBOutlet weak var tile13View: UIImageView! // O (JOB)
     @IBOutlet weak var tile14View: UIImageView! // B (JOB)
+
+    var isPresenting: Bool = true
     
     var yOffsets : [Float] = [-285, -740, -480, -408, -500, -400, -400, -400, -400,
         -640, -640,
@@ -34,7 +36,7 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     var xOffsets : [Float] = [-30, 75, -45, 10, 200, 180, 180, 180, 180,
         5, 5,
         -100, -100, -100]
-    var scales : [Float] = [1, 1.65, 1.7, 1.6, 1.65, 1.65, 1.65, 1.65, 1.65,
+    var scales : [Float] = [1.5, 1.65, 1.7, 1.6, 1.65, 1.65, 1.65, 1.65, 1.65,
         1.7, 1.7,
         1.5, 1.5, 1.5]
     var rotations : [Float] = [-10, -10, 10, 10, 10, -10, -10, -10, -10,
@@ -89,21 +91,24 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         var ty = convertValue(offset, r1Min: 0, r1Max: 507, r2Min: yOffsets[index], r2Max: 0)
         view.transform = CGAffineTransformMakeTranslation(CGFloat(tx), CGFloat(ty))
         
-//        var s = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: scales[index], r2Max: 1)
-//        view.transform = CGAffineTransformScale(view.transform, CGFloat(s), CGFloat(s))
-//        
-//        var r = convertValue(offset, r1Min: 0, r1Max: 568, r2Min: rotations[index], r2Max: 0)
-//        view.transform = CGAffineTransformRotate(view.transform, CGFloat(Double(r) * M_PI / 180))
+        var s = convertValue(offset, r1Min: 0, r1Max: 507, r2Min: scales[index], r2Max: 1)
+        view.transform = CGAffineTransformScale(view.transform, CGFloat(s), CGFloat(s))
+        
+        var r = convertValue(offset, r1Min: 0, r1Max: 507, r2Min: rotations[index], r2Max: 0)
+        view.transform = CGAffineTransformRotate(view.transform, CGFloat(Double(r) * M_PI / 180))
     }
 
+    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+        return contentView
+    }
+    
     // UIScrollViewDelegate methods
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
         var offset = Float(scrollView.contentOffset.y)
         
         println("IntroViewController - scrollViewDidScroll: offset.y = \(offset)")
-        
-        // avatar
+
         transformView(tile1View, atIndex: 0, offset: offset)
         transformView(tile2View, atIndex: 1, offset: offset)
         transformView(tile3View, atIndex: 2, offset: offset)
@@ -123,14 +128,60 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
         transformView(tile14View, atIndex: 13, offset: offset)
     }
     
-    /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        println("prepareForSegue")
+        
+        var destinationVC = segue.destinationViewController as TutorialViewController
+        destinationVC.modalPresentationStyle = UIModalPresentationStyle.Custom
+        destinationVC.transitioningDelegate = self
     }
-    */
 
+    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+        println("animating transition")
+        var containerView = transitionContext.containerView()
+        var toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
+        var fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!
+        
+        if (isPresenting) {
+            containerView.addSubview(toViewController.view)
+            toViewController.view.alpha = 0
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
+                toViewController.view.alpha = 1
+                }) { (finished: Bool) -> Void in
+                    transitionContext.completeTransition(true)
+            }
+        } else {
+            UIView.animateWithDuration(0.4, animations: { () -> Void in
+                fromViewController.view.alpha = 0
+                }) { (finished: Bool) -> Void in
+                    transitionContext.completeTransition(true)
+                    fromViewController.view.removeFromSuperview()
+            }
+        }
+    }
+    
+    // MAKR: - UIViewControllerTransitioningDelegate
+    
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+        // The value here should be the duration of the animations scheduled in the animationTransition method
+        return 0.4
+    }
+    
+    // MARK: - UIViewControllerAnimatedTransitioning
+    
+    func animationControllerForPresentedController(presented: UIViewController!, presentingController presenting: UIViewController!, sourceController source: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
+        isPresenting = true
+        return self
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController!) -> UIViewControllerAnimatedTransitioning! {
+        isPresenting = false
+        return self
+    }
+    
 }
